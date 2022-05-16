@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { Link, Route, Routes, Navigate } from "react-router-dom"
+import Home from './Components/Home';
+import About from './Components/About';
 
 function App() {
 
@@ -21,10 +23,18 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </nav>
+      </header>
       <main>
         <Routes>
-          <Route path="/" element={<h1>Hello World!</h1>} />
-          <Route path="/about" element={<h1>And this is where I'd put an about component< br/>IF I HAD ONE</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
     </div>

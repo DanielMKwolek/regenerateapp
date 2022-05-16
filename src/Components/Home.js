@@ -1,6 +1,11 @@
+import ColorPreview from "./ColorPreview";
+import Linkable from "./Linkable";
+import AndroidPhone from "./AndroidPhone";
+import ApplePhone from "./ApplePhone";
+
 const Home = (props) => {
     return(
-        <h1>This is a placeholder</h1>
+        <h1>This is a Home placeholder</h1>
     );
 }
 
