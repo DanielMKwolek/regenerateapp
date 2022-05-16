@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-* {
+/* * {
     transition: background-color 1s ease-in;
-}
+} */
 
 body {
     background-color: var(--dark-shade);
