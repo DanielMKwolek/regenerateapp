@@ -7,9 +7,9 @@ import About from './Components/About';
 function App() {
 
   let [colorConfig, setColorConfig] = useState({
-    lightColor: "#EAE7E1",
+    lightShade: "#EAE7E1",
     lightAccent: "#76AD82",
-    mainBrandColor: "#773646",
+    mainBrand: "#773646",
     darkAccent: "#807A72",
     darkShade: "#18191A"
   })
@@ -25,9 +25,9 @@ function App() {
   .then(response => response.json())
   .then(data => {
     setColorConfig({
-      lightColor: `rgb(${data.result[0].join()})`,
+      lightShade: `rgb(${data.result[2].join()})`,
       lightAccent: `rgb(${data.result[1].join()})`,
-      mainBrandColor: `rgb(${data.result[2].join()})`,
+      mainBrand: `rgb(${data.result[0].join()})`,
       darkAccent: `rgb(${data.result[3].join()})`,
       darkShade: `rgb(${data.result[4].join()})`
     });
@@ -37,10 +37,10 @@ function App() {
 
   document.getElementById('internalStyleSheet').innerHTML = (`
   :root {
-    --light-color: ${colorConfig.lightColor};
+    --light-shade: ${colorConfig.lightShade};
     --light-accent: ${colorConfig.lightAccent};
-    --main-brand-color: ${colorConfig.mainBrandColor};
-    --dark-accent: ${colorConfig.mainBrandColor};
+    --main-brand: ${colorConfig.mainBrand};
+    --dark-accent: ${colorConfig.darkAccent};
     --dark-shade: ${colorConfig.darkShade};
   }
 `);
