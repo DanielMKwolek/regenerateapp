@@ -6,7 +6,13 @@ import About from './Components/About';
 
 function App() {
 
-  let [colorConfig, setColorConfig] = useState({})
+  let [colorConfig, setColorConfig] = useState({
+    lightColor: "#EAE7E1",
+    lightAccent: "#76AD82",
+    mainBrandColor: "#773646",
+    darkAccent: "#807A72",
+    darkShade: "#18191A"
+  })
 
   useEffect(() => {
   fetch("http://colormind.io/api/", {
@@ -17,9 +23,28 @@ function App() {
   })
 })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+    setColorConfig({
+      lightColor: `rgb(${data.result[0].join()})`,
+      lightAccent: `rgb(${data.result[1].join()})`,
+      mainBrandColor: `rgb(${data.result[2].join()})`,
+      darkAccent: `rgb(${data.result[3].join()})`,
+      darkShade: `rgb(${data.result[4].join()})`
+    });
+  })
   .catch(error => console.log(error));
   }, [])
+
+  document.getElementById('internalStyleSheet').innerHTML = (`
+  :root {
+    --light-color: ${colorConfig.lightColor};
+    --light-accent: ${colorConfig.lightAccent};
+    --main-brand-color: ${colorConfig.mainBrandColor};
+    --dark-accent: ${colorConfig.mainBrandColor};
+    --dark-shade: ${colorConfig.darkShade};
+  }
+`);
+
 
   return (
     <div className="App">
