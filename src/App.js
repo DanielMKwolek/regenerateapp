@@ -1,12 +1,12 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import { Link, Route, Routes, Navigate } from "react-router-dom"
+import { useState} from 'react';
+import { Link, Route, Routes} from "react-router-dom"
 import Home from './Components/Home';
 import About from './Components/About';
 
 function App() {
 
-  let [colorConfig, setColorConfig] = useState({
+  let [colorConfig] = useState({
     lightShade: "#EBECEE",
     lightAccent: "#6BA7A8",
     mainBrand: "#747674",

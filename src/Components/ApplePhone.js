@@ -1,6 +1,6 @@
 const ApplePhone = (props) => {
     return(
-        <h1>This is a placeholder</h1>
+        <h1>This is an apple phone placeholder</h1>
     );
 }
 

@@ -1,6 +1,6 @@
 const AndroidPhone = (props) => {
     return(
-        <h1>This is a placeholder</h1>
+        <h1>This is an android phone placeholder</h1>
     );
 }
 
