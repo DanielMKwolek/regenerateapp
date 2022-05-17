@@ -7,33 +7,33 @@ import About from './Components/About';
 function App() {
 
   let [colorConfig, setColorConfig] = useState({
-    lightShade: "#EAE7E1",
-    lightAccent: "#76AD82",
-    mainBrand: "#773646",
-    darkAccent: "#807A72",
-    darkShade: "#18191A"
+    lightShade: "#EBECEE",
+    lightAccent: "#6BA7A8",
+    mainBrand: "#747674",
+    darkAccent: "#248EA9",
+    darkShade: "#1C1A20"
   })
 
-  useEffect(() => {
-  fetch("http://colormind.io/api/", {
-  method: "POST",
-  body: JSON.stringify({
-    model: "default",
-    input: ["N","N","N","N","N"]
-  })
-})
-  .then(response => response.json())
-  .then(data => {
-    setColorConfig({
-      lightShade: `rgb(${data.result[2].join()})`,
-      lightAccent: `rgb(${data.result[1].join()})`,
-      mainBrand: `rgb(${data.result[0].join()})`,
-      darkAccent: `rgb(${data.result[3].join()})`,
-      darkShade: `rgb(${data.result[4].join()})`
-    });
-  })
-  .catch(error => console.log(error));
-  }, [])
+//   useEffect(() => {
+//   fetch("http://colormind.io/api/", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     model: "default",
+//     input: ["N","N","N","N","N"]
+//   })
+// })
+//   .then(response => response.json())
+//   .then(data => {
+//     setColorConfig({
+//       lightShade: `rgb(${data.result[2].join()})`,
+//       lightAccent: `rgb(${data.result[1].join()})`,
+//       mainBrand: `rgb(${data.result[0].join()})`,
+//       darkAccent: `rgb(${data.result[3].join()})`,
+//       darkShade: `rgb(${data.result[4].join()})`
+//     });
+//   })
+//   .catch(error => console.log(error));
+//   }, [])
 
   document.getElementById('internalStyleSheet').innerHTML = (`
   :root {
@@ -58,7 +58,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

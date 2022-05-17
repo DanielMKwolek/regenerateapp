@@ -27,3 +27,11 @@ a {
     color: inherit;
     text-decoration-line: none;
 }
+
+#regenerate {
+    font-size: 64px;
+}
+
+#regenerate span {
+    font-size: 48px;
+}
