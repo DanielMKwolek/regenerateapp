@@ -1,12 +1,12 @@
 import './App.css';
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { Link, Route, Routes} from "react-router-dom"
 import Home from './Components/Home';
 import About from './Components/About';
 
 function App() {
 
-  let [colorConfig] = useState({
+  let [colorConfig, setColorConfig] = useState({
     lightShade: "#EBECEE",
     lightAccent: "#6BA7A8",
     mainBrand: "#747674",
@@ -14,7 +14,17 @@ function App() {
     darkShade: "#1C1A20"
   })
 
-  useEffect(() => {
+  document.getElementById('internalStyleSheet').innerHTML = (`
+  :root {
+    --light-shade: ${colorConfig.lightShade};
+    --light-accent: ${colorConfig.lightAccent};
+    --main-brand: ${colorConfig.mainBrand};
+    --dark-accent: ${colorConfig.darkAccent};
+    --dark-shade: ${colorConfig.darkShade};
+  }
+`);
+
+const handleRegenerate = () => {
   fetch("http://colormind.io/api/", {
   method: "POST",
   body: JSON.stringify({
@@ -33,32 +43,13 @@ function App() {
     });
   })
   .catch(error => console.log(error));
-  }, [])
-
-  document.getElementById('internalStyleSheet').innerHTML = (`
-  :root {
-    --light-shade: ${colorConfig.lightShade};
-    --light-accent: ${colorConfig.lightAccent};
-    --main-brand: ${colorConfig.mainBrand};
-    --dark-accent: ${colorConfig.darkAccent};
-    --dark-shade: ${colorConfig.darkShade};
-  }
-`);
-
+}
 
   return (
     <div className="App">
-      <header>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-        </nav>
-      </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home regen={handleRegenerate}/>} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

@@ -8,20 +8,20 @@ const Home = (props) => {
         <div id="homeDiv">
             <div id="headlineDiv">
                 <div>
-                    <p id="regenerate">R<span>EGENERATE</span></p>
+                    <p id="regenerate" onClick={props.regen}>R<span>EGENERATE</span></p>
                     <p id="colorBranding">Color Branding</p>
                     <p id="madeEasy">made easy</p>
                 </div>
                 <ColorPreview/>
             </div>
             <div id="blurbDiv1">
-                <p>Color is a way of expressing your <span>values</span></p>
+                <p>Color is a way of expressing<br /><span>values</span></p>
             </div>
             <div id="appleDiv">
                 <ApplePhone />
             </div>
             <div id="blurbDiv2">
-                <p>Our system makes branding a <span>breeze</span></p>
+                <p>Our system makes branding a <br /><span>breeze</span></p>
             </div>
             <div id="androidDiv">
                 <AndroidPhone />
