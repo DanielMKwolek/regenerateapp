@@ -29,7 +29,7 @@ const handleRegenerate = () => {
   method: "POST",
   body: JSON.stringify({
     model: "default",
-    input: ["N","N","N","N","N"]
+    input: ["N","N","N","N",[28, 26, 32]]
   })
 })
   .then(response => response.json())
@@ -46,7 +46,8 @@ const handleRegenerate = () => {
 }
 
   return (
-    <div className="App">
+    <div className="App bds">
+      <p className="da fsm bds" onClick={handleRegenerate}><span className="fsl">R</span>EGENERATE</p>
       <main>
         <Routes>
           <Route path="/" element={<Home regen={handleRegenerate}/>} />

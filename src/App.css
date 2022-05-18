@@ -3,14 +3,53 @@
     transition: background-color 1s ease-in;
 } */
 
-body {
-    background-color: var(--dark-shade);
-    color: rgba(255,255,255,.8);
-    font-family: 'Montserrat', sans-serif;
+.ls {
+    color: var(--light-shade);
+}
+.la {
+    color: var(--light-accent);
+}
+.mb {
+    color: var(--main-brand);
+}
+.da {
+    color: var(--dark-accent);
+}
+.ds {
+    color: var(--dark-shade);
 }
 
-span {
-    color: var(--light-shade);
+.bls {
+    background-color: var(--light-shade);
+}
+.bla {
+    background-color: var(--light-accent);
+}
+.bmb {
+    background-color: var(--main-brand);
+}
+.bda {
+    background-color: var(--dark-accent);
+}
+.bds {
+    background-color: var(--dark-shade);
+}
+
+.fsm {
+    font-size: 32pt;
+}
+
+.fsl {
+    font-size: 48pt;
+}
+
+.App {
+    font-family: 'Montserrat', sans-serif;
+}
+.App > p {
+    position: sticky;
+    top: 0;
+    padding-top: 24px;
 }
 
 #homeDiv {
@@ -27,34 +66,14 @@ span {
     grid-template-rows: 60vh 40vh;
 }
 
-#headlineDiv > :nth-child(1) > :nth-child(1) > span {
-    font-size: 36pt;
-}
-
-#headlineDiv > :nth-child(1)  > :nth-child(1){
-    background-color: var(--light-accent);
-    position: fixed;
-    width: 100vw;
-    font-size: 64pt;
-    color: var(--main-brand);
-}
-
-#headlineDiv > :nth-child(1)  > :nth-child(2) {
-    margin-top: 30vh;
-    font-size: 32pt;
-    color: var(--light-accent) 
-}
-
-#headlineDiv > :nth-child(1)  > :nth-child(3) {
-    margin-top: 0;
-    font-size: 32pt;
-    color: var(--dark-accent)
+#headlineDiv p{
+    margin-top: 20vh;
 }
 
 #colorPreview {
     display: flex;
     justify-content: space-around;
-    background-color: rgba(255,255,255,.08);
+    background-image: linear-gradient(to right, var(--dark-shade), var(--light-shade));
     margin-bottom: 10px;
 }
 
@@ -64,32 +83,14 @@ span {
     border-radius: 16px;
 }
 
-#colorPreview > :nth-child(1) {
-    background-color: var(--light-shade);
-}
-
-#colorPreview > :nth-child(2) {
-    background-color: var(--light-accent);
-}
-
-#colorPreview > :nth-child(3) {
-    background-color: var(--main-brand);
-}
-
-#colorPreview > :nth-child(4) {
-    background-color: var(--dark-accent);
-}
-
-#colorPreview > :nth-child(5) {
-    background-color: var(--dark-shade);
-}
-
 #blurbDiv1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#blurbDiv1 > p {
-    font-size: 32pt;
+#blurbDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
