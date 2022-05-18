@@ -57,7 +57,7 @@
     height: 500vh;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: repeat(5,100vh);
+    grid-template-rows: repeat(6,100vh);
 }
 
 #headlineDiv {

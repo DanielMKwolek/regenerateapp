@@ -1,5 +1,5 @@
 import ColorPreview from "./ColorPreview";
-import Linkable from "./Linkable";
+import Linkables from "./Linkables";
 import AndroidPhone from "./AndroidPhone";
 import ApplePhone from "./ApplePhone";
 
@@ -25,10 +25,10 @@ const Home = (props) => {
             <div id="androidDiv">
                 <AndroidPhone />
             </div>
-            <div id="contactDiv">
-                <p>C<span>ONTACT</span> U<span>S</span></p>
-                <p>F<span>OR</span> Y<span>OUR</span> D<span>EMO</span></p>
-                <Linkable url="" imgsrc="" />
+            <div className="bls mb fsl" id="contactDiv">
+                <p>C<span className="la fsm">ONTACT</span> U<span className="la fsm">S</span></p>
+                <p>F<span className="la fsm">OR</span> Y<span className="la fsm">OUR</span> D<span className="la  fsm">EMO</span></p>
+                <Linkables url="" imgsrc="" />
             </div>
         </div>
     );
