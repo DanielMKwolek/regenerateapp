@@ -14,26 +14,26 @@ function App() {
     darkShade: "#1C1A20"
   })
 
-//   useEffect(() => {
-//   fetch("http://colormind.io/api/", {
-//   method: "POST",
-//   body: JSON.stringify({
-//     model: "default",
-//     input: ["N","N","N","N","N"]
-//   })
-// })
-//   .then(response => response.json())
-//   .then(data => {
-//     setColorConfig({
-//       lightShade: `rgb(${data.result[2].join()})`,
-//       lightAccent: `rgb(${data.result[1].join()})`,
-//       mainBrand: `rgb(${data.result[0].join()})`,
-//       darkAccent: `rgb(${data.result[3].join()})`,
-//       darkShade: `rgb(${data.result[4].join()})`
-//     });
-//   })
-//   .catch(error => console.log(error));
-//   }, [])
+  useEffect(() => {
+  fetch("http://colormind.io/api/", {
+  method: "POST",
+  body: JSON.stringify({
+    model: "default",
+    input: ["N","N","N","N","N"]
+  })
+})
+  .then(response => response.json())
+  .then(data => {
+    setColorConfig({
+      lightShade: `rgb(${data.result[2].join()})`,
+      lightAccent: `rgb(${data.result[1].join()})`,
+      mainBrand: `rgb(${data.result[0].join()})`,
+      darkAccent: `rgb(${data.result[3].join()})`,
+      darkShade: `rgb(${data.result[4].join()})`
+    });
+  })
+  .catch(error => console.log(error));
+  }, [])
 
   document.getElementById('internalStyleSheet').innerHTML = (`
   :root {
