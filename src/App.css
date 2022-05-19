@@ -53,6 +53,7 @@
 .App > p {
     position: sticky;
     top: 0;
+    z-index: 1;
     padding-top: 24px;
 }
 
@@ -105,7 +106,15 @@
     align-items: center;
 }
 
-.backButtonDiv {
+.appleBackButtonDiv {
     display: flex;
     align-items: center;
+}
+
+.appleBackChevron {
+    height: 10vh;
+    width: 10vh;
+    mask-image: url("assets/rect10.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
