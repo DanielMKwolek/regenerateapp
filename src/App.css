@@ -3,6 +3,10 @@
     transition: background-color 1s ease-in;
 } */
 
+.body {
+    background-color: black;
+}
+
 .ls {
     color: var(--light-shade);
 }
@@ -45,6 +49,18 @@
 
 .fss {
     font-size: 16pt;
+}
+
+.fsam {
+    font-size: 3vh;
+}
+
+.fsal {
+    font-size: 4vh;
+}
+
+.fsas {
+    font-size: 2vh;
 }
 
 .App {
@@ -100,10 +116,19 @@
     align-items: center;
 }
 
+.applePhone {
+    font-family: Helvetica, Arial, sans-serif;
+    border: 5px solid var(--dark-accent);
+    border-radius: 16px;
+    background-color: #F7F7FA;
+}
+
 .applePhone header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    border-radius: 14px 13px 0 0;
+    background-color: #FFFFFF;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .appleBackButtonDiv {
@@ -112,9 +137,36 @@
 }
 
 .appleBackChevron {
-    height: 10vh;
-    width: 10vh;
+    height: 5vh;
+    width: 5vh;
+    margin-left: -10px;
+    margin-right: -10px;
     mask-image: url("assets/rect10.png");
+    mask-size: 35%;
     mask-repeat: no-repeat;
     mask-position: center;
+}
+
+.appleTitle {
+    margin: auto;
+}
+
+
+.appleForm {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10vw;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.appleForm input {
+    border: none;
+    background-color: white;
+    padding: 10px 10px 5px 10px;
+    margin: 5px 0;
+}
+
+.appleForm::placeholder {
+    color: white;
 }
