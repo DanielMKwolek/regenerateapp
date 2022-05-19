@@ -4,18 +4,26 @@ const ApplePhone = (props) => {
             <header className="appleTitleBar">
                 <div className="appleBackButtonDiv da">
                     <div className="appleBackChevron bda"> </div>
-                    <p onClick={() => {}}className="fsam">Back</p>
+                    <p onClick={() => {}}className="fsas">Back</p>
                 </div>
-                <p className="appleTitle da fsal">Regenerate</p>
+                <p className="appleTitle mb fsal">Regenerate</p>
                 <div />
             </header>
             <div className="appleBody">
-                <form className="appleForm bda">
-                    <input className="da fsas" type="text" placeholder="Name"/>
-                    <input className="da fsas" type="text" placeholder="Username"/>
-                    <input className="da fsas" type="text" placeholder="Email"/>
-                    <input className="da fsas" type="password" placeholder="Password"/>
-                    <input className="da fsas" type="password" placeholder="Repeat Password"/>
+                <p className="appleFormLabel la">User Info</p>
+                <form className="appleForm">
+                    <input className="mb fsas" type="text" placeholder="Name"/>
+                    <div className="appleDividerLine"></div>
+                    <input className="mb fsas" type="text" placeholder="Username"/>
+                    <div className="appleDividerLine"></div>
+                    <input className="mb fsas" type="text" placeholder="Email"/>
+                    <div className="appleDividerLine"></div>
+                    <input className="mb fsas" type="password" placeholder="Password"/>
+                    <div className="appleDividerLine"></div>
+                    <input className="mb fsas" type="password" placeholder="Repeat Password"/>
+                </form>
+                <form className="appleForm" id="appleForm2">
+                    <textarea className="mb fsas" placeholder="Notes"></textarea>
                 </form>
             </div> 
         </div>

@@ -3,6 +3,10 @@
     transition: background-color 1s ease-in;
 } */
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .body {
     background-color: black;
 }
@@ -71,6 +75,7 @@
     top: 0;
     z-index: 1;
     padding-top: 24px;
+    height: 9vh;
 }
 
 #homeDiv {
@@ -78,17 +83,17 @@
     height: 500vh;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: repeat(6,100vh);
+    grid-template-rows: repeat(6,91vh);
 }
 
 #headlineDiv {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 60vh 40vh;
+    grid-template-rows: 50vh 40vh;
 }
 
 #headlineDiv p{
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 #colorPreview {
@@ -118,17 +123,21 @@
 
 .applePhone {
     font-family: Helvetica, Arial, sans-serif;
-    border: 5px solid var(--dark-accent);
+    border: 3px solid var(--dark-accent);
+    margin: 16px;
     border-radius: 16px;
     background-color: #F7F7FA;
 }
 
 .applePhone header {
     display: grid;
-    border-radius: 14px 13px 0 0;
-    background-color: #FFFFFF;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    border-radius: 14px 13px 0 0;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #FFFFFF;
+    padding: 2px 0;
+    margin-bottom: 16px;
 }
 
 .appleBackButtonDiv {
@@ -137,10 +146,10 @@
 }
 
 .appleBackChevron {
-    height: 5vh;
-    width: 5vh;
-    margin-left: -10px;
-    margin-right: -10px;
+    height: 4vh;
+    width: 4vh;
+    margin-left: -5px;
+    margin-right: -5px;
     mask-image: url("assets/rect10.png");
     mask-size: 35%;
     mask-repeat: no-repeat;
@@ -151,22 +160,39 @@
     margin: auto;
 }
 
+.appleFormLabel {
+    margin: 0 0 4px 4px;
+}
 
 .appleForm {
     display: flex;
     flex-direction: column;
-    margin: 10px 10vw;
-    padding: 10px;
-    border-radius: 16px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 .appleForm input {
     border: none;
     background-color: white;
     padding: 10px 10px 5px 10px;
-    margin: 5px 0;
 }
 
-.appleForm::placeholder {
-    color: white;
+.appleDividerLine {
+    height: 1px;
+    background-color: var(--main-brand);
+    margin: 0 0 0 16px;
+}
+
+#appleForm2 {
+    margin-top: 32px;
+    height: 30vh;
+}
+
+#appleForm2 textarea{
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+    resize: none;
+    border: none;
+    height: 100%;
 }
