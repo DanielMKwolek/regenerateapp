@@ -43,6 +43,10 @@
     font-size: 48pt;
 }
 
+.fss {
+    font-size: 16pt;
+}
+
 .App {
     font-family: 'Montserrat', sans-serif;
 }
@@ -92,5 +96,16 @@
 #blurbDiv2 {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.applePhone header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButtonDiv {
+    display: flex;
     align-items: center;
 }

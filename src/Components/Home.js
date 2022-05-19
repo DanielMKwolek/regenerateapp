@@ -1,7 +1,7 @@
 import ColorPreview from "./ColorPreview";
 import Linkables from "./Linkables";
 import AndroidPhone from "./AndroidPhone";
-import ApplePhone from "./ApplePhone";
+import ApplePhone from "./ApplePhone/ApplePhone";
 
 const Home = (props) => {
     return(
@@ -16,9 +16,7 @@ const Home = (props) => {
             <div id="blurbDiv1">
                 <p className="ls fsm">Color is a way of expressing<br /><span className="da">values</span></p>
             </div>
-            <div id="appleDiv">
-                <ApplePhone />
-            </div>
+            <ApplePhone />
             <div id="blurbDiv2">
                 <p className="ls fsm">Our system makes branding a <br /><span className="da">breeze</span></p>
             </div>
