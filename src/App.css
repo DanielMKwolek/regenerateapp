@@ -7,7 +7,7 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-.body {
+body {
     background-color: black;
 }
 
@@ -79,15 +79,14 @@ textarea:focus, input:focus{
 }
 
 #homeDiv {
-    width: 100vw;
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: repeat(6,91vh);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 91vh);
 }
 
 #headlineDiv {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: 50vh 40vh;
 }
 
