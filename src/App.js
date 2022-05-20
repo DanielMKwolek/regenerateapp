@@ -47,7 +47,7 @@ const handleRegenerate = () => {
 
   return (
     <div className="App bds">
-      <p className="da fsm bds" onClick={handleRegenerate}><span className="fsl">R</span>EGENERATE</p>
+      <p className="mb fsm bds" onClick={handleRegenerate}><span className="fsl">R</span>EGENERATE</p>
       <main>
         <Routes>
           <Route path="/" element={<Home regen={handleRegenerate}/>} />

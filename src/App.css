@@ -227,3 +227,16 @@ body {
 #contactDiv {
     margin-top: 10vh;
 }
+
+.aboutDiv {
+    height: 79vh;
+    margin-top: 10vh;
+}
+
+.backLink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-decoration: none;
+}
