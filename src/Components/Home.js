@@ -2,6 +2,7 @@ import ColorPreview from "./ColorPreview";
 import Linkables from "./Linkables";
 import AndroidPhone from "./AndroidPhone";
 import ApplePhone from "./ApplePhone/ApplePhone";
+import ColorableImage from "./ColorableImage";
 
 const Home = (props) => {
     return(
@@ -20,13 +21,10 @@ const Home = (props) => {
             <div id="blurbDiv2">
                 <p className="ls fsm">Our system makes branding a <br /><span className="da">breeze</span></p>
             </div>
-            <div id="androidDiv">
-                <AndroidPhone />
-            </div>
-            <div className="bls mb fsl" id="contactDiv">
+            <ColorableImage />
+            <div className="mb fsl" id="contactDiv">
                 <p>C<span className="la fsm">ONTACT</span> U<span className="la fsm">S</span></p>
                 <p>F<span className="la fsm">OR</span> Y<span className="la fsm">OUR</span> D<span className="la  fsm">EMO</span></p>
-                <Linkables url="" imgsrc="" />
             </div>
         </div>
     );

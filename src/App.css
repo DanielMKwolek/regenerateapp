@@ -80,7 +80,6 @@ textarea:focus, input:focus{
 
 #homeDiv {
     width: 100vw;
-    height: 500vh;
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: repeat(6,91vh);
@@ -195,4 +194,37 @@ textarea:focus, input:focus{
     resize: none;
     border: none;
     height: 100%;
+}
+
+.colorableImageDiv {
+    height: 100%;
+    width: 100%;
+}
+
+.colorableImageLayerOne {
+    position:relative;
+    background-image: url(assets/colorableImageLayer1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 100%;
+}
+
+.colorableImageLayerTwo {
+    position:relative;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-accent);
+    mask-image: url(assets/Mask\ group.png);
+    mask-position: right;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+
+
+#contactDiv {
+    margin-top: 10vh;
 }
